@@ -49,14 +49,34 @@ body {
     width: 370px;
     height: 32px;
     float: right;
-    background: url() no-repeat center;
+    background: url(./images/top_search_bg.jpg) no-repeat center;
     margin-right: 20px;
 
 }
 
 .search .search_text {
-    padding: 8px 0 0 15px;
+    padding: 8px 0 8px 15px;
     float: left;
     width: 110px;
     color: #999999;
+}
+
+.search .search_text a {
+    color: #999999;
+    text-decoration: none;
+}
+
+.search .search_input {
+    width: 182px;
+    height: 18px;
+    margin-top: 5px;
+    border: 1px solid #dbdbdb;
+    float: left;
+    border-bottom-color: #ffffff;
+    border-right-color: #ffffff;
+}
+
+.search .search_bt {
+    float: left;
+    padding: 2px 0 0 15px;
 }
