@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.clr {
+    clear: both;
+}
+
+body {
+    background: url(./images/background.jpg) center top no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.main {
+    width: 1000px;
+    margin: 0px auto;
+    background: #0FC;
+    margin: 0px auto;
+}
+
+/*=============TOP============= */
+.top {
+    width: 1000px;
+    height: 38px;
+    background-color: #4A4A4A;
+}
+
+.languages {
+    float: right;
+    width: 150px;
+    padding-top: 8px;
+}
+
+.languages div {
+    float: left;
+    color: #B3ADAD;
+    padding: 2px 5px 0 0;
+}
+
+.languages a {
+    float: left;
+    display: block;
+    padding: 0 3px;
+}
+
+.search {
+    width: 370px;
+    height: 32px;
+    float: right;
+    background: url() no-repeat center;
+    margin-right: 20px;
+
+}
+
+.search .search_text {
+    padding: 8px 0 0 15px;
+    float: left;
+    width: 110px;
+    color: #999999;
+}
