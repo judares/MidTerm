@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tạo đơn hàng</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/datepicker3.css" rel="stylesheet">
+    <link href="css/jquery.toast.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span>Lumino</span>Admin</a>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+        <ul class="nav menu">
+            <li>
+                <a href="index.html">
+                    <em class="fa fa-list-ul">&nbsp;</em> Danh sách sản phẩm </a>
+            </li>
+            <li class="active">
+                <a href="tao-don-hang.html">
+                    <em class="fa fa-address-card">&nbsp;</em> Tạo đơn hàng </a>
+            </li>
+            <li>
+				<a href="login.html">
+					<em class="fa fa-power-off">&nbsp;</em> Đăng xuất </a>
+			</li>
+        </ul>
+    </div>
+    <!--/.sidebar-->
+
+    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#">
+                        <em class="fa fa-home"></em>
+                    </a>
+                </li>
+                <li class="active">Danh sách sản phẩm</li>
+            </ol>
+        </div>
+        <!--/.row-->
+
+        <div class="panel panel-default col-md-10 col-md-offset-1" style="margin-top: 15px">
+            <div class="panel-heading">
+                <p style="text-align: center; font-weight: bold">Đơn hàng</p>
+            </div>
+            <form>
+                <div class="panel-body">
+                    <div class="form-group col-md-6 col-md-offset-1">
+                        <label for="ho-ten">Họ tên khách hàng:</label>
+                        <input type="text" class="form-control" id="ho-ten">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="so-dien-thoai">Số điện thoại:</label>
+                        <input type="text" class="form-control" id="so-dien-thoai">
+                    </div>
+                    <div class="form-group col-md-10 col-md-offset-1 ">
+                        <label for="dia-chi">Địa chỉ</label>
+                        <input type="text" class="form-control" id="dia-chi">
+                    </div>
+                    <div class="form-group col-md-6 col-md-offset-1">
+                        <label for="nguoi-tao-don">Người tạo đơn:</label>
+                        <input type="text" class="form-control" id="nguoi-tao-don" value="Phạm Đức Lộc" disabled>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="ngay-tao-don">Ngày tạo đơn:</label>
+                        <input type="text" class="form-control" id="ngay-tao-don" disabled>
+                    </div>
+                    <table id="table-ds-san-pham-don-hang" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th width="10%" class="th-center">Mã số</th>
+                                <th width="40%">Tên</th>
+                                <th width="10%" class="th-center">Số lượng</th>
+                                <th width="15%" class="th-center">Đơn giá</th>
+                                <th width="15%" class="th-center">Tổng tiền</th>
+                                <th width="10%" class="th-center">
+                                    <button id="btn-modal" type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-them-san-pham">
+                                        <em class="fa fa-plus"></em>
+                                    </button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer" style="height: 60px;">
+                    <div class="col-md-6">
+                        <p class="p-tong-tien">Tổng tiền:
+                            <input id="tong-tien-don-hang" class="input-tong-tien" value="0" disabled/> VNĐ </p>
+                    </div>
+                    <div class="col-md-6">
+                        <button id="btn-tao-don-hang" class="btn btn-success pull-right" type="button">
+                            <b>Tạo đơn hàng</b>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/.main-->
+
+    <div id="modal-them-san-pham" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Thêm sản phẩn vào đơn hàng</h4>
+                </div>
+                <div class="modal-body">
+                    <select id="select-san-pham" class="form-control">Chọn sản phẩm:
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button id="btn-them-san-pham" type="button" class="btn btn-info" data-dismiss="modal">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.toast.js"></script>
+    <script src="js/tao-don-hang.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>

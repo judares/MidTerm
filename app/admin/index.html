@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Danh sách sản phẩm</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/jquery.toast.css" rel="stylesheet">
+	<link href="css/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<span>Lumino</span>Admin</a>
+			</div>
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<ul class="nav menu" id="left-menu-nav">
+			<!-- <li class="active">
+				<a href="index.html">
+					<em class="fa fa-list-ul">&nbsp;</em> Danh sách sản phẩm </a>
+			</li>
+			
+			<li>
+				<a href="login.html">
+					<em class="fa fa-power-off">&nbsp;</em> Đăng xuất </a>
+			</li> -->
+		</ul>
+	</div>
+	<!--/.sidebar-->
+
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li>
+					<a href="#">
+						<em class="fa fa-home"></em>
+					</a>
+				</li>
+				<li class="active">Danh sách sản phẩm</li>
+			</ol>
+		</div>
+		<!--/.row-->
+
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<table id="table-ds-san-pham" class="table table-striped">
+					
+				</table>
+			</div>
+		</div>
+	</div>
+	<!--/.main-->
+
+	<div id="modal-xem-thong-tin-san-pham" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Thông tin điện thoại</h4>
+                </div>
+                <div class="modal-body">
+					<div class="container-fluid">
+						<div class="form-group col-md-4">
+							<label for="ma-dien-thoai">ID sản phẩm:</label>
+							<input type="text" class="form-control" id="ma-dien-thoai" disabled>
+						</div>
+						<div class="form-group col-md-8">
+							<label for="ten-dien-thoai">Tên sản phẩm:</label>
+							<input type="text" class="form-control" id="ten-dien-thoai" disabled>
+						</div>
+						<div class="form-group col-md-12">
+							<label for="mo-ta-dien-thoai">Mô tả sản phẩm:</label>
+							<textarea style="resize: none" rows="3" type="text" class="form-control" id="mo-ta-dien-thoai" disabled></textarea>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="don-gia-dien-thoai">Đơn giá sản phẩm:</label>
+							<input type="number" style="-webkit-appearance: none;" min=0 class="form-control" id="don-gia-dien-thoai">
+						</div>
+						<div class="form-group col-md-3 col-md-offset-2">
+							<label for="so-luong-ton">Số lượng tồn:</label>
+							<input type="number" min=0 class="form-control" id="so-luong-ton"> 
+						</div>
+						<div class="form-group col-md-3">
+							<label for="so-luong-ban">Số lượng đã bán:</label>
+							<input type="number" class="form-control" id="so-luong-ban" disabled>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="so-luong-ton">Hình ảnh:</label>
+							<img id="hinh-anh-dien-thoai" class="col-md-offset-5" src="http://via.placeholder.com/150x200" width="150" height="200">
+						</div>
+					</div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btn-sua-thong-tin-san-pham" type="button" class="btn btn-info" data-dismiss="modal"><b>Sửa thông tin</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/jquery.toast.js"></script>
+	<script src="js/dataTables.bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "lab03",
+  "version": "1.0.0",
+  "description": "Read and write (update) large Data file",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/judares/PTUDW-Project.git"
+  },
+  "keywords": [
+    "cnxml",
+    "xml"
+  ],
+  "author": "PNKDuong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/judares/PTUDW-Project/issues"
+  },
+  "homepage": "https://github.com/judares/PTUDW-Project/blob/master/README.md",
+  "dependencies": {
+    "jsonwebtoken": "^8.3.0",
+    "xml-js": "^1.6.2",
+    "xml2js": "^0.4.19",
+    "xmldom": "^0.1.27",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
